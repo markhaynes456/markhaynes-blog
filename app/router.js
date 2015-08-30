@@ -6,6 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route("posts",{path:'/'});
+  this.route("post",{path:'/post/:post_id'});
+  this.route("contact");
+  this.route("projects");
 });
 
 export default Router;

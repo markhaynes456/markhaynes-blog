@@ -3,7 +3,7 @@
     <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-3" data-clearing>
       {{#each model as |project| }}
       <li>
-        {{project-widget title=project.name link=project.url}}
+        {{project-widget title=project.name link=project.url image_url=project.image_url}}
       </li>
       {{/each}}
     </ul>

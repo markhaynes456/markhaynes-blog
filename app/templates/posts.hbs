@@ -1,18 +1,11 @@
-<h1>A list of posts (about me) </h1>
-<ul id="posts">
-  {{#each item in model }}
-  <li>
-    <h1> {{item.title}} </h1>
-    <h2> {{item.subtitle}} </h2>
-    <h3> Introduction </h3>
-    <p> {{item.intro}} </p>
-    <h3> Body </h3>
-    <p> {{item.body}} </p>
-    <h3> Conclusion </h3>
-    <p> {{item.outro}} </p>
-  </li>
-  {{/each}}
-</ul>
-{{#blog-list}}
-
-{{/blog-list}}
+<div class="row">
+<div class="large-12 columns">
+    <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-3" data-clearing>
+      {{#each model as |post| }}
+      <li>
+        {{article-widget title = post.title id = post.id link = 'post'}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
